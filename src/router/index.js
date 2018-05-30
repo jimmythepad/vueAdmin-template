@@ -38,6 +38,111 @@ export const constantRouterMap = [
   },
 
   {
+    path: '/Home',
+    component: Layout,
+    children: [
+      {
+        path: 'dashboard',
+        name: 'Home',
+        component: () => import('@/views/home/index'),
+        meta: { title: 'Home', icon: 'form' }
+      }
+    ]
+  },
+
+  {
+    path: '/diagnostics',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        name: 'Diagnostics',
+        component: () => import('@/views/diagnostics/index'),
+        meta: { title: 'Diagnostics', icon: 'form' }
+      }
+    ]
+  },
+
+  {
+    path: '/prognostics',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        name: 'Prognostics',
+        component: () => import('@/views/prognostics/index'),
+        meta: { title: 'Prognostics', icon: 'form' }
+      }
+    ]
+  },
+
+  {
+    path: '/predictive',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        name: 'Predictive Quality and Controlled Release',
+        component: () => import('@/views/predictive/index'),
+        meta: { title: 'Predictive Quality and Controlled Release', icon: 'form' }
+      }
+    ]
+  },
+
+  {
+    path: '/connected',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        name: 'Connected and Collaborative',
+        component: () => import('@/views/connected/index'),
+        meta: { title: 'Connected and Collaborative', icon: 'form' }
+      }
+    ]
+  },
+
+  {
+    path: '/defect',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        name: 'Defect Detection',
+        component: () => import('@/views/defect/index'),
+        meta: { title: 'Defect Detection', icon: 'form' }
+      }
+    ]
+  },
+
+  {
+    path: '/past',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        name: 'Past Analysis / Logs',
+        component: () => import('@/views/past/index'),
+        meta: { title: 'Past Analysis / Logs', icon: 'form' }
+      }
+    ]
+  },
+
+  {
+    path: '/metrics',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        name: 'Metrics',
+        component: () => import('@/views/metrics/index'),
+        meta: { title: 'Metrics', icon: 'form' }
+      }
+    ]
+  },
+
+
+  {
     path: '/example',
     component: Layout,
     redirect: '/example/table',
@@ -68,6 +173,32 @@ export const constantRouterMap = [
         name: 'Form',
         component: () => import('@/views/form/index'),
         meta: { title: 'Form', icon: 'form' }
+      }
+    ]
+  },
+
+  {
+    path: '/database',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        name: 'Database Status',
+        component: () => import('@/views/database/index'),
+        meta: { title: 'Database Status', icon: 'form' }
+      }
+    ]
+  },
+
+  {
+    path: '/Settings',
+    component: Layout,
+    children: [
+      {
+        path: 'Settings',
+        name: 'Settings',
+        component: () => import('@/views/Settings/index'),
+        meta: { title: 'Settings', icon: 'form' }
       }
     ]
   },
